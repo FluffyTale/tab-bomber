@@ -19,6 +19,10 @@ require('fs').readFile("./nicks.txt", 'utf8', function(e,d) {
  join_bot(true);
 });
 
+process.on('uncaughtException', (err, origin) => {
+ console.log(err);
+});
+
 async function join_bot(i) {
 var username = nicks[0];
 if(!username) return console.log(`! Boom`);
@@ -29,13 +33,12 @@ var client = mc.createClient({
 });
 
 client.on('connect', () => {
- console.log(`> ${username} loginned`);
+ console.log(`> ${username} connected`);
 });
 if(i) client.on('disconnect', (packet) => { console.log(`> Disconnect with reason: ` + packet.reason) });
 
 setTimeout(() => {
- nicks.splice(0, 1);
- join_bot();
-}, 1000);
-
+ nicks.splice(0,1)
+ join_bot()
+ }, 1000);
 };

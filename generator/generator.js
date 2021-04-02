@@ -3,7 +3,6 @@ const type = Number(process.argv[2]);
 
 console.log("\x1b[37m", '- tab-bomber/generator.js')
 
-async function generator() {
 const r1 = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -15,6 +14,8 @@ r1.question[promisify.custom] = (question) => {
     r1.question(question, resolve);
   });
 };
+
+async function generator() {
 
 if(type === 1) {
 console.log("\x1b[37m", `> Создание последовательных ников (fox1, fox2, fox3...)`);
@@ -46,7 +47,7 @@ return;
 };
 
 function restart() {
-console.clear();
+console.log('');
 generator();
 };
 
