@@ -4,6 +4,13 @@ let nicks, ip;
 ip = process.argv[2].split(':');
 if(!ip[1]) ip[1] = 25565;
 
+let version = '1.12.2';
+require('fs').readFile("./version.txt", 'utf8', function(e,d) {
+ if(e) return;
+ console.log(`> Версия: ` + d)
+ if(d) version = d;
+});
+
 require('fs').readFile("./nicks.txt", 'utf8', function(e,d) {
  if(e) throw e;
  nicks = d.replace(/\r/g,'').split('\n');
@@ -18,7 +25,7 @@ if(!username) return console.log(`! Boom`);
 
 var client = mc.createClient({
  host: ip[0], port: ip[1],
- username: username, version: '1.12.2'
+ username: username, version: version
 });
 
 client.on('connect', () => {
