@@ -18,13 +18,13 @@ r1.question[promisify.custom] = (question) => {
 async function generator() {
 
 if(type === 1) {
-console.log("\x1b[37m", `> Создание последовательных ников (fox1, fox2, fox3...)`);
-let prefix = await promisify(r1.question)('Укажите слово > ');
+console.log("\x1b[37m", `> Создание секвенции (fox1, fox2, fox3...)`);
+let prefix = await promisify(r1.question)('Укажите приставку > ');
 if(prefix.length < 3 || prefix.length > 12) {
  console.log(`! Слово должно быть от 3 до 12 символов`);
  return restart();
 };
-let count = Number(await promisify(r1.question)('Укажите число ников > '));
+let count = Number(await promisify(r1.question)('Укажите кол-во > '));
 if(count < 2 || count > 200) {
  console.log(`! Вы можете указать число от 2 до 200`);
  return restart();
