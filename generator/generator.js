@@ -21,12 +21,12 @@ if(type === 1) {
 console.log("\x1b[37m", `> Создание секвенции (fox1, fox2, fox3...)`);
 let prefix = await promisify(r1.question)('Укажите приставку > ');
 if(prefix.length < 3 || prefix.length > 12) {
- console.log(`! Слово должно быть от 3 до 12 символов`);
+ console.log(`! Приставка должна быть от 3 до 12 символов`);
  return restart();
 };
 let count = Number(await promisify(r1.question)('Укажите кол-во > '));
 if(count < 2 || count > 200) {
- console.log(`! Вы можете указать число от 2 до 200`);
+ console.log(`! Кол-во может быть от 2 до 200`);
  return restart();
 };
 
@@ -38,7 +38,7 @@ while(count > 0) {
 
 nicks = nicks.join('\r\n');
 require('fs').writeFileSync('../nicks.txt', nicks);
-console.log(`! Готово`);
+console.log(`! Саксес`);
 
 return;
 };
