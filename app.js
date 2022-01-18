@@ -14,7 +14,7 @@ require('fs').readFile("./version.txt", 'utf8', function(e,d) {
 require('fs').readFile("./nicks.txt", 'utf8', function(e,d) {
  if(e) throw e;
  nicks = d.replace(/\r/g,'').split('\n');
- if(nicks.length < 2) return console.log(`! Слишком мало никнеймов в nicks.txt`);
+ if(nicks.length < 2) return console.log(`! nicks.txt заполни то`);
  
  join_bot(true);
 });
