@@ -1,11 +1,11 @@
-# ReNaze Technologiesв
-Простейший программизм для таба серверов Minecraft.
+# ReNaze Technologies
+Простейший программизм для табов серверов Minecraft. (без  офк)
 
 Никнеймы в *nicks.txt* 
-Генератор ников *generator.js* наделает ников (ВАУ) (generator/1. sequence.bat).
+\nГенератор ников *generator.js* наделает ников (ВАУ) (generator/1. sequence.bat).
 
 Версия по умолчанию 1.12.2 (поддерживаются до 1.17.1, смотрите доку мэнифлаера)
-Менять в *version.txt*
+\nМенять в *version.txt*
 
 ---
 
