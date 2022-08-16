@@ -1,13 +1,13 @@
 # ReNaze Technologies
 Простейший *программизм* для табов серверов* Minecraft.
 
-**nicks.txt**: тут находятся ники, которые можно дополнить/сгенерировать
+**nicks.txt**: список ников (при новой генерации обнуляется)
 
-**version.txt**: версия сервера, по умолчанию 1.12.2 (см. поддерживаемые версии [тут](https://github.com/PrismarineJS/mineflayer))
+**version.txt**: версия игры (по умолчанию 1.12.2) (см. поддерживаемые версии [тут](https://github.com/PrismarineJS/mineflayer))
 
 ---
 
-*!! Всякую капчу, сложные проверки бот не пройдет, поэтому жопа ес чо*
+*!! На всяческие капчи бот не рассчитан*
 
 [**Another project**](https://github.com/FluffyTale/minecorpfarmer)
 
